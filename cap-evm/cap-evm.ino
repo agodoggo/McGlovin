@@ -1,3 +1,11 @@
+//////////////// IMPORTANT PACKAGES TO DOWNLOAD ////////////////
+/*
+ * To be able to use this code, you need to download the custom library (slight-FDC1004-master) that's in a zip file in the GitHub repository.
+ * To do this, click on Sketch at the top, then Include Library, then Add .ZIP Library and select the zip file from the repository.
+ * You also need to download the slight_DebugMenu library. Again, to do this, go to Sketch, Include Library, Manage Libraries, then search for "slight_DebugMenu" and install the latest version.
+ */
+
+
 #include <LiquidCrystal.h>
 #include <slight_DebugMenu.h>
 #include <Wire.h>
@@ -163,5 +171,6 @@ void setup(void) {
 void loop() {
   mySensor.update();
   calc_capacitance(Serial);
+  // waiting 10 seconds before taking next measurement
   delay(10000);
 }
